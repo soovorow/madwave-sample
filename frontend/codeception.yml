@@ -1,0 +1,34 @@
+namespace: frontend\tests
+actor: Tester
+paths:
+    tests: tests
+    log: tests/_output
+    data: tests/_data
+    helpers: tests/_support
+settings:
+    bootstrap: _bootstrap.php
+    colors: true
+    memory_limit: 1024M
+modules:
+#    enabled:
+#        - Codeception\Extension\MultiDb
+    config:
+        Yii2:
+            configFile: 'config/test-local.php'
+#        Codeception\Extension\MultiDb:
+#            timezone: "+00:00"
+#            connectors:
+#                Primary:
+#                    dsn: 'mysql:host=localhost;dbname=madwave_app'
+#                    user: 'root'
+#                    password: 'REDACTED_BEFORE_PUBLICATION'
+#                    dump: tests/_data/yii2-madwave.sql
+#                    cleanup: false # reload dump between tests
+#                    populate: false # load dump before all tests
+#                Secondary:
+#                    dsn: 'mysql:host=localhost;dbname=madwave_products'
+#                    user: 'root'
+#                    password: 'REDACTED_BEFORE_PUBLICATION'
+#                    dump: tests/_data/products.sql
+#                    cleanup: false # reload dump between tests
+#                    populate: false # load dump before all tests

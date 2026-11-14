@@ -1,0 +1,50 @@
+.map-marker
+  width: 18px
+  height: 20px
+  display: block
+  float: left
+  margin-top: -2px
+  margin-right: 10px
+  background: url("../images/icons/marker.svg") center center / contain no-repeat
+
+#city-picker
+  .modal-header
+    padding: 40px 40px 0
+    border-bottom: none
+  .modal-body
+    padding: 10px 40px 40px 40px
+  ul
+    list-style: none
+    padding: 0
+  h2
+    margin: 0
+    font-size: 24px
+    font-weight: 500
+    small
+      font-size: 16px
+      color: #aeaeae
+      text-transform: none
+  label
+    margin-top: 20px
+    font-size: 10px
+    font-weight: bold
+    text-transform: uppercase
+
+
+.pac-container
+  z-index: 2000
+
+.set-city
+  display: block
+  font-size: 13px
+  font-weight: bold
+  color: #bbb
+  text-transform: uppercase
+  cursor: pointer
+  padding: 6px 0
+  &.active
+    color: #232323
+  &.active, &:hover
+    &:before
+      content: "\2192"
+      margin-right: 10px

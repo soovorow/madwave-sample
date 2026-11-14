@@ -1,0 +1,231 @@
+
+// BONUS
+.bonus
+  background: url('../images/bonus-bg.png') no-repeat center
+  background-size: cover
+  padding-bottom: 40px
+  margin-top: -30px
+  margin-bottom: -71px
+  @include responsive-c-max($xs)
+    text-align: center
+  &-wrap
+    .breadcrumbs_container
+      padding: 25px 0 0px 0px
+      background: #f3f3f3
+  &-title
+    margin-top: 40px
+    font-size: 71px
+    line-height: 1em
+    color: #db3d3d
+    text-transform: uppercase
+    @include responsive-c-max($xs)
+      font-size: 34px
+
+  &-subtitle
+    font-size: 24px
+    text-transform: uppercase
+    @include responsive-c-max($xs)
+      font-size: 18px
+  &-desc
+    margin-top: 25px
+    font-size: 18px
+    @include responsive-c-max($xs)
+      font-size: 16px
+  &-cards
+    @include responsive-c-max($xs)
+      text-align: left
+  &-card
+    display: block
+    position: relative
+    z-index: 1
+    overflow: hidden
+    box-shadow: 0px 0px 12px rgba(black, .1)
+    background: white
+    margin-top: 35px
+    transition: all .4s ease
+    &:hover, &:focus
+
+      box-shadow: 0px 0px 8px rgba(black, .35)
+      text-decoration: none
+
+    .img-responsive
+      position: absolute
+      top: 0
+      left: -15px
+      width: 110px
+    &-content
+      padding-left: 105px
+    &-title
+      margin-top: 15px
+      text-transform: uppercase
+      font-weight: 500
+      @include responsive-c-max($md)
+        margin-top: 10px
+      @include responsive-c-max($xs)
+        margin-top: 15px
+    &-desc
+      margin-top: 5px
+      color: #999999
+      @include responsive-c-max($md)
+        margin-top: 0px
+      @include responsive-c-max($xs)
+        margin-top: 5px
+
+    &-price
+      margin-top: 15px
+      font-size: 14px
+      margin-bottom: 5px
+      @include responsive-c-max($md)
+        margin-top: 10px
+      @include responsive-c-max($xs)
+        margin-top: 15px
+    &-old
+      font-size: 18px
+      text-decoration: line-through
+      color: #999999
+    &-new
+      font-size: 24px
+      color: $color_primary
+    &-tag
+      position: absolute
+      right: -20px
+      top: 3px
+      font-size: 14px
+      font-weight: 600
+      background: $color_primary
+      padding: 4px 25px 3px 25px
+      text-align: center
+      transform: rotate(45deg)
+      color: white
+  &-form
+    margin-top: 35px
+    &-title
+      font-size: 16px
+      text-transform: uppercase
+      margin-bottom: 15px
+      font-weight: 500
+    &-small
+      display: block
+      margin-top: 10px
+    label
+      font-size: 10px
+      font-weight: 600
+    &-strategy
+      margin-top: 20px
+      line-height: 22px
+      margin-bottom: 10px
+
+  .img-responsive
+    display: inline-block
+
+.flex
+  display: flex
+  align-items: stretch
+  flex-grow: nowrap
+
+
+#bonusModal
+  .modal-dialog
+    max-width: 575px
+    height: 100%
+    margin: 0 auto
+    position: relative
+    padding: 10px
+    @include responsive('md')
+      padding: 0
+
+  .modal-body
+    padding: 0
+
+  .modal-content
+    top: 0
+    background: #ea1b1c
+    background: -moz-linear-gradient(45deg,  #db0b09 0%, #db0b09 35%, #ea0304 35%, #ea0304 100%)
+    background: -webkit-linear-gradient(45deg,  #db0b09 0%,#db0b09 35%,#ea0304 35%,#ea0304 100%)
+    background: linear-gradient(45deg,  #db0b09 0%,#db0b09 35%,#ea0304 35%,#ea0304 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db0b09', endColorstr='#ea0304',GradientType=1 )
+    color: #fff
+    padding: 30px
+    height: auto
+    @include responsive('md')
+      top: calc(50% - 250px)
+  .title
+    padding-bottom: 40px
+    text-align: center
+    @include responsive('md')
+      padding-left: 150px
+      text-align: left
+  .accent
+    text-transform: uppercase
+    display: block
+    font-size: 85px
+    font-stretch: condensed
+    line-height: 1
+    padding-top: 20px
+    letter-spacing: -5px
+    font-weight: 500
+    @include responsive('md')
+      font-size: 108px
+  .sub-accent
+    display: block
+    font-stretch: condensed
+    text-transform: uppercase
+    font-size: 38px
+    color: #6a1616
+    line-height: 1.4
+    letter-spacing: -2px
+    margin-bottom: 30px
+    @include responsive('md')
+      font-size: 44px
+      margin-bottom: 0
+
+  .btn
+    padding: 14px 6px 10px 6px
+    font-size: 14px
+    line-height: 1
+    border: 1px solid #fff
+    @include responsive('md')
+      padding: 22px 20px 17px 20px
+
+    &.btn-default
+      color: #ea1b1c
+      box-shadow: 0 10px 30px 0px rgba(0,0,0,.1)
+    &.btn-danger
+      background: #ea1b1c
+      margin-left: 10px
+      opacity: .7
+
+  small
+    opacity: .7
+    font-size: 80%
+    display: block
+
+  .products
+    display: none
+    position: absolute
+    background: #f5f5f5
+    background: -moz-linear-gradient(-45deg,  #f2f2f2 0%, #f2f2f2 50%, #f5f5f5 50%, #f5f5f5 100%)
+    background: -webkit-linear-gradient(-45deg,  #f2f2f2 0%,#f2f2f2 50%,#f5f5f5 50%,#f5f5f5 100%)
+    background: linear-gradient(135deg,  #f2f2f2 0%,#f2f2f2 50%,#f5f5f5 50%,#f5f5f5 100%)
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#f5f5f5',GradientType=1 )
+    width: 240px
+    height: 240px
+    left: -150px
+    top: -55px
+    box-shadow: 0 10px 30px 0px rgba(0,0,0,.2)
+    @include responsive('md')
+      display: block
+
+.disc-cycle
+  background: #da0000
+  text-align: center
+  border-radius: 100%
+  display: block
+  position: absolute
+  right: 0
+  top: -30px
+  font-size: 12px
+  height: 40px
+  width: 40px
+  line-height: 40px
+  font-weight: bold

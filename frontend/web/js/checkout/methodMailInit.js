@@ -1,0 +1,9 @@
+var autocomplete_1;
+function methodMailInit() {
+    return initAutocomplete('methodmail', autocomplete_1, {
+        street_number: ['short_name', 'methodmail-house', 'номер дома', false],
+        route: ['long_name', 'methodmail-street', 'название улицы', true],
+        locality: ['long_name', 'methodmail-locality', 'населенный пункт', true],
+        postal_code: ['short_name', 'methodmail-postalcode', 'почтовый индекс', false]
+    });
+}

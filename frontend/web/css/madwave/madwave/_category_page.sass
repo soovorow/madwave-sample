@@ -1,0 +1,330 @@
+.category-page
+  padding: 0
+  h1
+    font-size: 30px
+    font-weight: 400
+    margin-top: 0
+  .category-page__header
+    margin-bottom: 30px
+    margin-top: 40px
+    span.text-right
+      font-size: 16px
+      padding-top: 10px
+  .product
+    border: transparent
+
+  .catalog-border
+    border: 1px solid #eee
+    margin-left: -1px
+    margin-bottom: -1px
+    &:hover
+      border: 1px solid #aaa
+      z-index: 2
+
+  #totalListCount
+    text-align: left
+    @include responsive('md')
+      text-align: right
+
+
+.product_list_title
+  border: 1px solid #eee
+  @include responsive($md)
+    width: calc(100% - 2px)
+    margin-left: -1px
+    margin-bottom: -1px
+
+.product_list_title__wrap
+  padding-left: 0
+  padding-right: 0
+  @include responsive($sm)
+    padding-left: 15px
+    padding-right: 15px
+  @include responsive($md)
+    padding-left: 0
+  @include make-xs-column(12)
+  @include make-md-column(8)
+  @include make-md-column-push(4)
+  @include make-lg-column(9)
+  @include make-lg-column-push(3)
+
+#sort-select
+  width: 170px
+  display: inline-block
+  margin-left: 20px
+
+#category_header
+  height: 160px
+  position: relative
+  overflow: hidden
+  img
+    width: 100%
+    position: absolute
+    top: 50%
+    margin-top: -32%
+
+
+.filter_form_wrap
+  margin-bottom: -1px
+  @include make-xs-column(12)
+  @include make-md-column(4)
+  @include make-md-column-pull(8)
+  @include make-lg-column(3)
+  @include make-lg-column-pull(9)
+  @include responsive($md)
+    float: right
+    padding-right: 0
+
+
+#filter_form
+  margin-bottom: 30px
+  margin-top: 30px
+  display: none
+  @include responsive($md)
+    margin-top: 0
+    display: block !important
+  h4
+    cursor: pointer
+    font-size: 18px
+    font-weight: 300
+    margin: 0
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+    &, & + div
+      padding: 26px 38px
+    & + div
+      display: none
+      padding-top: 0
+
+
+.filter_container
+  border: 1px solid #eee
+  margin-bottom: -1px
+  &.without-header
+    padding: 26px 38px
+  &:hover
+    background: #f6f6f6
+
+.filter-arrow
+  display: inline-block
+  position: relative
+  float: left
+  width: 22px
+  height: 22px
+  top: 7px
+  margin-right: 10px
+  margin-left: -10px
+  -webkit-transform: translateY(-50%)
+  transform: translateY(-50%)
+  &:before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    border: 1px solid #ebebeb
+    border-radius: 50%
+    box-sizing: border-box
+    transition: .2s ease-in-out
+  &:after
+    content: ''
+    position: absolute
+    left: 50%
+    top: 50%
+    width: 9px
+    height: 5.625px
+    background-size: 100%
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath fill='%23535354' d='M4 5c-.3 0-.5-.1-.7-.3l-3-3C-.1 1.3-.1.7.3.3c.4-.4 1-.4 1.4 0L4 2.6 6.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-3 3c-.2.2-.4.3-.7.3z'/%3E%3C/svg%3E") no-repeat 50%
+    -webkit-transform: translate(-50%,-50%)
+    transform: translate(-50%,-50%)
+
+._open .filter-arrow:after
+  background-size: 100%
+  background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8.6 5.3'%3E%3Cpath fill='%23535354' d='M1 5.3C.7 5.3.5 5.2.3 5c-.4-.4-.4-1 0-1.4L3.6.3c.2-.2.4-.3.7-.3.3 0 .5.1.7.3l3.3 3.3c.4.4.4 1 0 1.4-.4.4-1 .4-1.4 0L4.3 2.4 1.7 5c-.2.2-.4.3-.7.3z'/%3E%3C/svg%3E") no-repeat 50%
+  width: 9px
+  height: 5.54651px
+
+
+.product_list__sorting
+  padding: 30px 21px
+  font-size: 16px
+  border-bottom: 1px solid #eee
+  b
+    font-weight: 500
+  a
+    margin-left: 30px
+    text-decoration: none
+    color: #a1a1a1
+    &.selected
+      color: #000
+      &:after
+        content: ''
+        background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 5'%3E%3Cpath fill='%23535354' d='M4 5c-.3 0-.5-.1-.7-.3l-3-3C-.1 1.3-.1.7.3.3c.4-.4 1-.4 1.4 0L4 2.6 6.3.3c.4-.4 1-.4 1.4 0 .4.4.4 1 0 1.4l-3 3c-.2.2-.4.3-.7.3z'/%3E%3C/svg%3E") no-repeat 50%
+        width: 9px
+        height: 5.625px
+        background-size: 100%
+        transform: translate(-50%, -50%) rotate(180deg)
+        display: inline-block
+        margin-left: 15px
+
+#category-description
+  p
+    @include make-xs-column(12)
+    @include make-md-column(8)
+    @include make-md-column-push(2)
+    color: #919191
+    font-size: 18px
+    padding-top: 70px
+  &:before
+    content: ''
+    @include make-xs-column(12)
+    margin-top: 70px
+    margin-bottom: 0
+
+.colorpick-form
+  label
+    display: block
+    font-size: 14px
+    font-weight: normal
+
+label
+  cursor: pointer
+  font-size: 14px
+  font-weight: normal
+  &.disabled
+    color: #ccc
+    cursor: not-allowed
+
+
+
+.checkbox
+  display: none
+.checkbox + span
+  width: 20px
+  height: 20px
+  border: 1px solid #ccc
+  border-radius: 2px
+  background-color: #fff
+  display: inline-block
+  margin-top: 10px
+  margin-bottom: -5px
+  margin-right: 10px
+  text-align: center
+  color: #fff
+  cursor: pointer
+
+.checkbox:checked + span
+  background: $color_primary
+  border: 1px solid $color_primary
+
+.checkbox:checked + span:before
+  content: '\2714'
+  line-height: 22px
+
+.checkbox[disabled] + span
+  cursor: not-allowed
+  background: #eee
+
+
+.product_list_container
+  @include make-xs-column(12)
+  @include make-md-column(8)
+  @include make-md-column-push(4)
+  @include make-lg-column(9)
+  @include make-lg-column-push(3)
+  padding: 0
+  @include responsive($sm)
+    padding-left: 15px
+    padding-right: 15px
+  @include responsive($md)
+    padding-left: 0
+    padding-right: 15px
+
+span.colorbox
+  display: inline-block
+  width: 15px
+  height: 15px
+  background: #ccc
+  margin-right: 10px
+  border-radius: 100%
+  position: relative
+  top: 2px
+
+
+  &.color
+    &--0001
+      background: #000
+    &--0002
+      background: #b8f250
+    &--0003
+      background: #f8273d
+    &--0005
+      background: #6d57cd
+    &--0006
+      background: #6f635e
+    &--0006
+
+    &--0007
+      background: #bcbdc1
+
+    &--0008
+      background: #808080
+    &--0009
+      background: #3362c1
+    &--0011
+      background: #fd884e
+
+    &--0012,
+    &--0004
+      background: #efefef
+
+    &--0013
+      background: #c85ab0
+    &--0014
+      background: #fc64aa
+    &--0015
+      background: #ead6bf
+    &--0016
+      background: #fff
+      border: 1px solid #ccc
+      &.active
+        border: 0px
+    &--0017
+      background: #6be7f7
+    &--0018
+      background: #31a5be
+    &--0019
+      background: #fcd64b
+    &--0020
+
+    &--0021
+      background: #984f00
+    &--0024
+      background: #f2c5e6
+    &--0023,
+    &--0025
+      background: red /* not working, let's see some red */
+      background: -moz-linear-gradient( top , rgba(255, 0, 0, 1) 0%,rgba(255, 255, 0, 1) 15%,rgba(0, 255, 0, 1) 30%,rgba(0, 255, 255, 1) 50%,rgba(0, 0, 255, 1) 65%,rgba(255, 0, 255, 1) 80%,rgba(255, 0, 0, 1) 100%)
+      background: -webkit-gradient(linear,  left top,  left bottom,color-stop(0%, rgba(255, 0, 0, 1)),color-stop(15%, rgba(255, 255, 0, 1)),color-stop(30%, rgba(0, 255, 0, 1)),color-stop(50%, rgba(0, 255, 255, 1)),color-stop(65%, rgba(0, 0, 255, 1)),color-stop(80%, rgba(255, 0, 255, 1)),color-stop(100%, rgba(255, 0, 0, 1)))
+    &.c0026
+      background: #ff01ff
+    &--0027
+
+    &--0028
+
+    &--0030
+      background: #f7696f
+    &--0031
+
+    &--0036
+      background: #3c5096
+    &--0037
+      background: #2ac085
+    &--0038
+      background: #ce8231

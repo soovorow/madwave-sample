@@ -1,0 +1,7 @@
+parameters:
+    autoload_files:
+        - %rootDir%/../../../vendor/autoload.php
+        - %rootDir%/../../../vendor/yiisoft/yii2/Yii.php
+        - %rootDir%/../../../common/config/bootstrap.php
+        - %rootDir%/../../../common/config/main.php
+        - %rootDir%/../../../common/config/main-local.php

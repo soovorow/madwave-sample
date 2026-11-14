@@ -1,0 +1,79 @@
+.featwidget {
+    position: relative;
+}
+
+.featwidget button {
+    border: none;
+    outline: none;
+}
+
+.featwidget-image {
+    position: relative;
+    width: 100%;
+}
+
+.featwidget-item {
+    position: absolute;
+}
+
+.featwidget-btn {
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 15px;
+    background: #00b0cc;
+    position: relative;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.featwidget-btn:hover,
+.featwidget-btn:focus {
+    background: #0091a8;
+    transition: 0.3s;
+}
+
+.featwidget-info {
+    display: none;
+    text-align: left;
+    background: #fff;
+    position: relative;
+    color: #222;
+    padding: 20px;
+    z-index: 1;
+    margin-top: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.featwidget-arrow {
+    background: #fff;
+    display: none;
+    position: relative;
+    transform:  rotate(45deg);
+    width: 17px;
+    height: 17px;
+    z-index: 2;
+    margin-left: 9px;
+    margin-top: 6px;
+}
+
+.featwidget-title {
+    line-height: 1.4;
+    font-size: 21px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+@media (max-width: 450px) {
+    .featwidget-title {
+        font-size: 18px;
+    }
+}
+
+.featwidget-desc {
+    line-height: 1.4;
+}
